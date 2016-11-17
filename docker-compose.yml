@@ -1,0 +1,9 @@
+version: '2'
+services:
+  jupyter:
+    build: .
+    volumes:
+      - './:/home/jovyan/work'
+      - '/var/run/docker.sock:/var/run/docker.sock'
+    ports:
+      - '8888:8888'
